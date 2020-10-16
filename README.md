@@ -6,3 +6,14 @@ FIKRADO THE SOMALI HACKERS ORGANIZATION IN EAST AFRICA
 # PLEASE DONATE AS IN OUR PAYPAL
 
 lioyahya3@gmail.com
+
+## [+] Installation & Usage
+```
+apt update
+apt install git -y
+pkg install python python2 && pip2 install requests mechanize
+git clone https://github.com/fikrado/JOKER-burtal-force
+cd JOKER-burtal-force
+
+```
+### 
