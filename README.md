@@ -1,7 +1,7 @@
 ## Find Me on :
 [![Github](https://img.shields.io/badge/Github-fikrado-yellow?style=for-the-badge&logo=github)](https://github.com/fikrado)
 [![Instagram](https://img.shields.io/badge/IG-%40mr__yahye-red?style=for-the-badge&logo=instagram)](https://www.instagram.com/mr__yahe)
-[![Messenger](https://img.shields.io/badge/Chat-Messenger-blue?style=for-the-badge&logo=messenger)](https://t.me/fikrado_hacker)
+[![Messenger](https://img.shields.io/badge/Chat-Messenger-blue?style=for-the-badge&logo=telegram)](https://t.me/fikrado_hacker)
 
 
 # JOKER FACEBOOK BRUTAL FORCE ATTACK
