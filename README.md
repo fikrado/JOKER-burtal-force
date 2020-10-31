@@ -1,3 +1,9 @@
+## Find Me on :
+[![Github](https://img.shields.io/badge/Github-HTR--TECH-green?style=for-the-badge&logo=github)](https://github.com/fikrado)
+[![Instagram](https://img.shields.io/badge/IG-%40tahmid.rayat-red?style=for-the-badge&logo=instagram)](https://www.instagram.com/mr__yahe)
+[![Messenger](https://img.shields.io/badge/Chat-Messenger-blue?style=for-the-badge&logo=messenger)](https://t.me/fikrado_hacker)
+
+
 # JOKER FACEBOOK BRUTAL FORCE ATTACK
 
 THIS TOOL IS FACEBOOK HACKING WITH BRUTAL FORCE CREATE BY
