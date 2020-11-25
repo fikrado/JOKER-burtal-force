@@ -25,7 +25,7 @@ git clone https://github.com/fikrado/JOKER-burtal-force
 
 cd JOKER-burtal-force
 
-python3 fbbrute.py
+𝙥𝙮𝙩𝙝𝙤𝙣 𝙛𝙗𝙗𝙧𝙪𝙩𝙚.𝙥𝙮
 
 ```
 ### 
