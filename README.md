@@ -13,7 +13,7 @@ FIKRADO THE SOMALI HACKERS ORGANIZATION IN EAST AFRICA
 
 lioyahya3@gmail.com
 
-## [+] Installation & Usage
+## HOW TO INSTALL JOKER BURTAL FORCE
 ```
 apt update
 
@@ -31,7 +31,11 @@ python joker.py
 ### 
 
 
+## HOW TO USE JOKER BRUTAL FORCE
 
+
+
+###
 
 ```
       python joker.py -t Victim@gmail.com -w /usr/share/wordlists/rockyou.txt
@@ -45,4 +49,6 @@ python joker.py
       python joker.py -g https://www.facebook.com/Victim_Profile
      
 ```
+###
+
 <img src="/itl.cat_joker-wallpaper-4k_3130186.png (1).jpg">
