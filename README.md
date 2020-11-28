@@ -10,7 +10,7 @@
 ### Is facebook burtalforce attack tool you can use it in this OS and applications 
 -------------------------------------------------------------------------------------------------
 ### 1: KALI LINUX
-### 2: ANY DIBIAN BASED OS AND UBUNTU
+### 2: LINUX OS 
 ### 3: TERMUX 
 ### 4: ANY OS THAT PYTHON INSTALLED ON IT
 
