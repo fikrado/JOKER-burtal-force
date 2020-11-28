@@ -31,7 +31,7 @@ python joker.py
 ```
 ### 
 
-<img src="/jk.PNG" size=%78px >
+<img src="/jk.PNG" size=%25px >
 ## HOW TO USE JOKER BRUTAL FORCE
 
 
