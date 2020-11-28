@@ -56,5 +56,5 @@ python joker.py
 ```
 ###
 # screan shot
-<img width="300" src="/jk.PNG" >
+<img width="600" src="/jk.PNG" >
 
