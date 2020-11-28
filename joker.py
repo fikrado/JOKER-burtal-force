@@ -146,23 +146,20 @@ class FaceBoom(object):
                 write("  [+] Successfully updated :)\n")
 
 parse = optparse.OptionParser(wi+"""
-Usage: python ./faceboom.py [OPTIONS...]
+Usage: python ./joker.py [OPTIONS...]
 -------------
-OPTIONS:
-       |
-    |--------
-    | -t <target email> [OR] <FACEBOOK ID>    ::> Specify target Email [OR] Target Profile ID
-    |--------
-    | -w <wordlist Path>                      ::> Specify Wordlist File Path
-    |--------
-    | -s <single password>                    ::> Specify Single Password To Check
-    |--------
-    | -p <Proxy IP:PORT>                      ::> Specify HTTP/S Proxy (Optional)
-    |--------
-    | -g <TARGET Facebook Profile URL>        ::> Specify Target Facebook Profile URL For Get HIS ID
-    |--------
-    | -u/--update                             ::> Update FaceBoom Script
--------------
+\x1b[1;96m   88               88                                
+\x1b[1;96m   ""               88                                
+\x1b[1;96m                    88                                
+\x1b[1;96m   88   ,adPPYba,   88   ,d8   ,adPPYba,  8b,dPPYba,  
+\x1b[1;96m   88  a8"     "8a  88 ,a8"   a8P_____88  88P'   "Y8  
+\x1b[1;96m   88  8b       d8  8888[     8PP"""""""  88          
+\x1b[1;96m   88  "8a,   ,a8"  88`"Yba,  "8b,   ,aa  88          
+\x1b[1;96m   88   `"YbbdP"'   88   `Y8a  `"Ybbd8"'  88          
+\x1b[1;96m  ,88                                                 
+\x1b[1;96m888P"                                                           
+  
+
 Examples:
         |
      |--------
