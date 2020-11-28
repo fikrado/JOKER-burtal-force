@@ -7,7 +7,7 @@
 # JOKER FACEBOOK BRUTAL FORCE ATTACK
 
 -----------------------------------------------------------------------------------------------
-### Is facebook burtalforce attack tool you can use it in this OS and applications 
+## Is facebook burtalforce attack tool you can use it in this OS and applications 
 -------------------------------------------------------------------------------------------------
 ### 1: KALI LINUX
 ### 2: ALL LINUX OS 
