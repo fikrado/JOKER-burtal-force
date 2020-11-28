@@ -6,7 +6,11 @@
 
 # JOKER FACEBOOK BRUTAL FORCE ATTACK
 
-### THIS TOOL IS FACEBOOK HACKING WITH BRUTAL FORCE CREATE BY FIKRADO THE SOMALI HACKERS ORGANIZATION IN EAST AFRICA 
+### is facebook burtalforce tool joker brutal force is tested on this os and divces
+1: KALI LINUX
+2: ANY DIBIAN BASED OS AND UBUNTU
+3: TERMUX 
+4: ANY OS THAT PYTHON INSTALLED ON IT
 
 
 
@@ -27,7 +31,7 @@ python joker.py
 ```
 ### 
 
-
+<img src="/jk.PNG" >
 ## HOW TO USE JOKER BRUTAL FORCE
 
 
@@ -47,5 +51,6 @@ python joker.py
      
 ```
 ###
+
 
 <img src="/itl.cat_joker-wallpaper-4k_3130186.png (1).jpg">
