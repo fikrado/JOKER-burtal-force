@@ -6,8 +6,15 @@
 <code><img height="300" src="https://elements-cover-images-0.imgix.net/599cf8df-69ea-42ee-ab6a-23e8d13624f3?auto=compress%2Cformat&fit=max&w=1019&s=0d7fb3fd2fdfba13dd2056a099b22dac"></code>
 # JOKER FACEBOOK BRUTAL FORCE ATTACK
 
-## Is facebook burtalforce tool joker brutal force is tested on this os and divces
--------------------------------------------------------------------------------------
+###
+
+
+###
+
+
+###
+Is facebook burtalforce tool joker brutal force is tested on this os and divces
+------------------------------------------------------------------------------------
 ### 1: KALI LINUX
 ### 2: ANY DIBIAN BASED OS AND UBUNTU
 ### 3: TERMUX 
