@@ -61,20 +61,11 @@ ________________________
 
 
 
-
-<video src="https://www.youtube.com/watch?v=iecKs0lwvaw" >
+# VIDEO TUTORIAL HOW TO USE THE TOOL
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/iecKs0lwvaw/0.jpg)](https://www.youtube.com/watch?v=iecKs0lwvaw)
 
-
-
-
-
-
-
-
-
-
+________________________________________________________________
 # screan shot
 <img width="600" src="/jk.PNG" >
 
